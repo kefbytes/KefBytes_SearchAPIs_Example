@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		1ED984851BB30FE5007E1E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED984841BB30FE5007E1E0D /* AppDelegate.swift */; };
-		1ED984871BB30FE5007E1E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED984861BB30FE5007E1E0D /* ViewController.swift */; };
 		1ED9848A1BB30FE5007E1E0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED984881BB30FE5007E1E0D /* Main.storyboard */; };
 		1ED9848C1BB30FE5007E1E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED9848B1BB30FE5007E1E0D /* Assets.xcassets */; };
 		1ED9848F1BB30FE5007E1E0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED9848D1BB30FE5007E1E0D /* LaunchScreen.storyboard */; };
+		1ED984971BB31179007E1E0D /* RootView_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED984961BB31179007E1E0D /* RootView_ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1ED984991BB31187007E1E0D /* ViewA_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED984981BB31187007E1E0D /* ViewA_ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1ED9849B1BB31193007E1E0D /* ViewB_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9849A1BB31193007E1E0D /* ViewB_ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1ED984811BB30FE5007E1E0D /* SearchAPIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchAPIs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED984841BB30FE5007E1E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1ED984861BB30FE5007E1E0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1ED984891BB30FE5007E1E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1ED9848B1BB30FE5007E1E0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ED9848E1BB30FE5007E1E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ED984901BB30FE5007E1E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ED984961BB31179007E1E0D /* RootView_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView_ViewController.swift; sourceTree = "<group>"; };
+		1ED984981BB31187007E1E0D /* ViewA_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewA_ViewController.swift; sourceTree = "<group>"; };
+		1ED9849A1BB31193007E1E0D /* ViewB_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewB_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				1ED984841BB30FE5007E1E0D /* AppDelegate.swift */,
-				1ED984861BB30FE5007E1E0D /* ViewController.swift */,
+				1ED984961BB31179007E1E0D /* RootView_ViewController.swift */,
+				1ED984981BB31187007E1E0D /* ViewA_ViewController.swift */,
+				1ED9849A1BB31193007E1E0D /* ViewB_ViewController.swift */,
 				1ED984881BB30FE5007E1E0D /* Main.storyboard */,
 				1ED9848B1BB30FE5007E1E0D /* Assets.xcassets */,
 				1ED9848D1BB30FE5007E1E0D /* LaunchScreen.storyboard */,
@@ -134,8 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED984871BB30FE5007E1E0D /* ViewController.swift in Sources */,
+				1ED9849B1BB31193007E1E0D /* ViewB_ViewController.swift in Sources */,
+				1ED984971BB31179007E1E0D /* RootView_ViewController.swift in Sources */,
 				1ED984851BB30FE5007E1E0D /* AppDelegate.swift in Sources */,
+				1ED984991BB31187007E1E0D /* ViewA_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
