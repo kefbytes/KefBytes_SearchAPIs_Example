@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import CoreSpotlight
+import MobileCoreServices
 
 class ViewA_ViewController: UIViewController {
 
+    let activity = NSUserActivity(activityType: "com.KefBytesLLC.SearchAPI.ViewA")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        activity.title = "SearchAPIs ViewA"
+        activity.keywords = Set(["ViewA", "SearchAPIs"])
+        activity.userInfo = ["view": "ViewA"]
+        activity.eligibleForSearch = true
+        activity.eligibleForPublicIndexing = true
+        activity.becomeCurrent()
     }
 
     override func didReceiveMemoryWarning() {
