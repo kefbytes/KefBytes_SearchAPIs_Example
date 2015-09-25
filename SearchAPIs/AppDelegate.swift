@@ -30,11 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let identifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
                 if identifier == "View A" {
                     let viewAController = mainStoryboard!.instantiateViewControllerWithIdentifier("ViewA") as! ViewA_ViewController
-                    navigationController!.presentViewController(viewAController, animated: true, completion: nil)
+                    navigationController!.pushViewController(viewAController, animated: true)
                     return true
                 } else if identifier == "View B" {
                     let viewBController = mainStoryboard!.instantiateViewControllerWithIdentifier("ViewB") as! ViewB_ViewController
-                    navigationController!.presentViewController(viewBController, animated: true, completion: nil)
+                    navigationController!.pushViewController(viewBController, animated: true)
                     return true
                 }
             }

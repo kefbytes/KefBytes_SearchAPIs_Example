@@ -23,7 +23,7 @@ class ViewB_ViewController: UIViewController {
         
         let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
         attributeSet.title = "View B"
-        attributeSet.contentDescription = "Nothing to see here"
+        attributeSet.contentDescription = "This is View B, It has a black background and white label"
         
         let item = CSSearchableItem(uniqueIdentifier: "View B", domainIdentifier: "com.KefBytesLLC.SearchAPI.ViewB", attributeSet: attributeSet)
         CSSearchableIndex.defaultSearchableIndex().indexSearchableItems([item]) { (error: NSError?) -> Void in
