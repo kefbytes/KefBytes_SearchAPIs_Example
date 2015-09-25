@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreSpotlight
+import MobileCoreServices
 
 class ViewB_ViewController: UIViewController {
 
@@ -14,6 +16,28 @@ class ViewB_ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let activity = NSUserActivity(activityType: "com.KefBytesLLC.SearchAPI.ViewB")
+        activity.userInfo = ["view": "ViewB"]
+        activity.title = "SearchAPIs View B"
+        let keywords = Set(["ViewB", "kefbytes"])
+        activity.keywords = Set(keywords)
+        activity.eligibleForHandoff = false
+        activity.eligibleForSearch = true
+        //activity.eligibleForPublicIndexing = true
+        //activity.expirationDate = NSDate()
+        
+        //
+        let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
+        attributeSet.title = "SearchAPIs View B - attributeSet Title"
+        attributeSet.contentDescription = "This is View B of the SearchAPIs app combining NSUserActivity and CoreSpotlight"
+        
+        activity.contentAttributeSet = attributeSet
+        self.userActivity = activity
+        self.userActivity!.becomeCurrent()
     }
 
     override func didReceiveMemoryWarning() {

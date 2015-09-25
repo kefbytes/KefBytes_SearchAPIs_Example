@@ -21,6 +21,16 @@ class RootView_ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func restoreUserActivityState(activity: NSUserActivity) {
+        if activity.activityType == "com.KefBytesLLC.SearchAPI.ViewA"
+        {
+            self.performSegueWithIdentifier("viewASegue", sender: self)
+        } else if activity.activityType == "com.KefBytesLLC.SearchAPI.ViewB" {
+            self.performSegueWithIdentifier("viewBSegue", sender: self)
+        }
+    }
+
+    
 
     /*
     // MARK: - Navigation

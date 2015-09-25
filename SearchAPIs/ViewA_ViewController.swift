@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import CoreSpotlight
+import MobileCoreServices
 
 class ViewA_ViewController: UIViewController {
+
+    let activity = NSUserActivity(activityType: "com.KefBytesLLC.SearchAPI.ViewA")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +20,26 @@ class ViewA_ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        activity.userInfo = ["view": "ViewA"]
+        activity.title = "SearchAPIs View A"
+        let keywords = Set(["ViewA", "kefbytes"])
+        activity.keywords = Set(keywords)
+        activity.eligibleForHandoff = false
+        activity.eligibleForSearch = true
+        //activity.eligibleForPublicIndexing = true
+        //activity.expirationDate = NSDate()
+        
+        let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
+        attributeSet.title = "SearchAPIs View A - attributeSet Title"
+        attributeSet.contentDescription = "This is View A of the SearchAPIs app combining NSUserActivity and CoreSpotlight"
+        
+        activity.contentAttributeSet = attributeSet
+        activity.becomeCurrent()
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

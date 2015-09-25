@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreSpotlight
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = self.window?.rootViewController as! UINavigationController
+        /* 
+            In our simple example this if block never gets called and it always falls to the else.
+            But in another app we may have something that is using core spotlight and not NSUSerActivity and
+            in that case the if block would be used.
+        */
+        if userActivity.activityType == CSSearchableItemActionType {
+            if let identifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+                if identifier == "View A" {
+                    let viewAController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewA") as! ViewA_ViewController
+                    navigationController.pushViewController(viewAController, animated: true)
+                    return true
+                } else if identifier == "View B" {
+                    let viewBController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewB") as! ViewB_ViewController
+                    navigationController.pushViewController(viewBController, animated: true)
+                    return true
+                }
+            }
+        } else {
+            if userActivity.activityType == "com.KefBytesLLC.SearchAPI.ViewA" {
+                navigationController.viewControllers[0].restoreUserActivityState(userActivity)
+                return true
+            } else if userActivity.activityType == "com.KefBytesLLC.SearchAPI.ViewB" {
+                navigationController.viewControllers[0].restoreUserActivityState(userActivity)
+                return true
+            }
+        }
+        return false
+    }
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -42,7 +42,7 @@
                                 </constraints>
                                 <state key="normal" title="View A"/>
                                 <connections>
-                                    <segue destination="r19-nT-fFb" kind="show" identifier="SearchAPIs.xcodeproj/project.xcworkspace/xcuserdata/kefranks.xcuserdatad/UserInterfaceState.xcuserstate" id="NZP-4P-28m"/>
+                                    <segue destination="r19-nT-fFb" kind="show" identifier="viewASegue" id="NZP-4P-28m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAb-N2-oWN">
