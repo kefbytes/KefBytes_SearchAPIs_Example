@@ -42,7 +42,7 @@
                                 </constraints>
                                 <state key="normal" title="View A"/>
                                 <connections>
-                                    <segue destination="r19-nT-fFb" kind="show" id="NZP-4P-28m"/>
+                                    <segue destination="r19-nT-fFb" kind="show" identifier="SearchAPIs.xcodeproj/project.xcworkspace/xcuserdata/kefranks.xcuserdatad/UserInterfaceState.xcuserstate" id="NZP-4P-28m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAb-N2-oWN">
@@ -53,7 +53,7 @@
                                 </constraints>
                                 <state key="normal" title="View B"/>
                                 <connections>
-                                    <segue destination="QxM-zD-hUF" kind="show" id="GWq-zu-NVq"/>
+                                    <segue destination="QxM-zD-hUF" kind="show" identifier="viewBSegue" id="GWq-zu-NVq"/>
                                 </connections>
                             </button>
                         </subviews>
