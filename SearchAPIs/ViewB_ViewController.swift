@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreSpotlight
+import MobileCoreServices
 
 class ViewB_ViewController: UIViewController {
 
@@ -14,6 +16,24 @@ class ViewB_ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
+        attributeSet.title = "View B"
+        attributeSet.contentDescription = "Nothing to see here"
+        
+        let item = CSSearchableItem(uniqueIdentifier: "View B", domainIdentifier: "com.KefBytesLLC.SearchAPI.ViewB", attributeSet: attributeSet)
+        CSSearchableIndex.defaultSearchableIndex().indexSearchableItems([item]) { (error: NSError?) -> Void in
+            if let error = error {
+                print("Indexing error: \(error.localizedDescription)")
+            } else {
+                print("Search item successfully indexed!")
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

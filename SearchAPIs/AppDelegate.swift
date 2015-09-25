@@ -7,17 +7,41 @@
 //
 
 import UIKit
+import CoreSpotlight
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var navigationController:UINavigationController?
+    var mainStoryboard: UIStoryboard?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        navigationController = self.window?.rootViewController as? UINavigationController
+        mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         return true
     }
+    
+    func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
+        if userActivity.activityType == CSSearchableItemActionType {
+            if let identifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+                if identifier == "View A" {
+                    let viewAController = mainStoryboard!.instantiateViewControllerWithIdentifier("ViewA") as! ViewA_ViewController
+                    navigationController!.presentViewController(viewAController, animated: true, completion: nil)
+                    return true
+                } else if identifier == "View B" {
+                    let viewBController = mainStoryboard!.instantiateViewControllerWithIdentifier("ViewB") as! ViewB_ViewController
+                    navigationController!.presentViewController(viewBController, animated: true, completion: nil)
+                    return true
+                }
+            }
+        }
+        return false
+    }
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
