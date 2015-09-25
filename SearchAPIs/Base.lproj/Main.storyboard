@@ -74,7 +74,7 @@
         <!--ViewA View Controller-->
         <scene sceneID="n3g-nd-uUS">
             <objects>
-                <viewController id="r19-nT-fFb" customClass="ViewA_ViewController" customModule="SearchAPIs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewA" id="r19-nT-fFb" customClass="ViewA_ViewController" customModule="SearchAPIs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OMG-5V-Fy3"/>
                         <viewControllerLayoutGuide type="bottom" id="A01-Ro-DLB"/>
@@ -108,7 +108,7 @@
         <!--ViewB View Controller-->
         <scene sceneID="Irb-1O-se4">
             <objects>
-                <viewController id="QxM-zD-hUF" customClass="ViewB_ViewController" customModule="SearchAPIs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewB" id="QxM-zD-hUF" customClass="ViewB_ViewController" customModule="SearchAPIs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NL8-gU-lIm"/>
                         <viewControllerLayoutGuide type="bottom" id="kds-M6-n8I"/>
