@@ -34,6 +34,9 @@ class ViewB_ViewController: UIViewController {
         let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
         attributeSet.title = "SearchAPIs View B - attributeSet Title"
         attributeSet.contentDescription = "This is View B of the SearchAPIs app combining NSUserActivity and CoreSpotlight"
+        let image:UIImage = UIImage(named: "LetterB")!
+        let data: NSData = UIImagePNGRepresentation(image)!
+        attributeSet.thumbnailData = data
         
         activity.contentAttributeSet = attributeSet
         self.userActivity = activity

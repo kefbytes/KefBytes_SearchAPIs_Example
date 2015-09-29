@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ECF2CFA1BBAEC6100C0090D /* LetterB.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ECF2CF91BBAEC6100C0090D /* LetterB.png */; settings = {ASSET_TAGS = (); }; };
 		1ED984851BB30FE5007E1E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED984841BB30FE5007E1E0D /* AppDelegate.swift */; };
 		1ED9848A1BB30FE5007E1E0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED984881BB30FE5007E1E0D /* Main.storyboard */; };
 		1ED9848C1BB30FE5007E1E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED9848B1BB30FE5007E1E0D /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1ECF2CF91BBAEC6100C0090D /* LetterB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LetterB.png; sourceTree = "<group>"; };
 		1ED984811BB30FE5007E1E0D /* SearchAPIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchAPIs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED984841BB30FE5007E1E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ED984891BB30FE5007E1E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				1ED9848B1BB30FE5007E1E0D /* Assets.xcassets */,
 				1ED9848D1BB30FE5007E1E0D /* LaunchScreen.storyboard */,
 				1ED984901BB30FE5007E1E0D /* Info.plist */,
+				1ECF2CF91BBAEC6100C0090D /* LetterB.png */,
 			);
 			path = SearchAPIs;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECF2CFA1BBAEC6100C0090D /* LetterB.png in Resources */,
 				1ED9848F1BB30FE5007E1E0D /* LaunchScreen.storyboard in Resources */,
 				1ED9848C1BB30FE5007E1E0D /* Assets.xcassets in Resources */,
 				1ED9848A1BB30FE5007E1E0D /* Main.storyboard in Resources */,
@@ -293,6 +297,7 @@
 				1ED984951BB30FE5007E1E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
